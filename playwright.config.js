@@ -1,6 +1,11 @@
 // @ts-check
 const { devices } = require('@playwright/test');
+import path from 'path';
+import dotenv from 'dotenv';
 
+dotenv.config({
+  path : path.resolve('testdata','.env')
+})
 const config = {
   testDir: './tests',
   retries :1,
